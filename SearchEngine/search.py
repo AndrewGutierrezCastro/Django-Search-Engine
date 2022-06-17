@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+from WebSpiderRIT.Query import query
 
 # done
 def google(s):
@@ -20,7 +20,11 @@ def google(s):
 
 #Grupo 3 Model
 def oursearchengine(s):
-    #result, metrics = query(s)
-    links = ['https://www.google.com']
-    text = ['Google']
+    links = []
+    text = []
+    documents, metrics = query(s)
+    for document in documents:
+        links.append(document["URL_Producto"])
+        text.append(document["Desc_Producto"])
+    print(metrics)
     return links, text

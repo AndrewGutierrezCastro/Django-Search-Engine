@@ -29,9 +29,7 @@
       <h4 class="panel panel-blue text-center">Our Search Engine</h4>
       <div class="justify-content-center">
         {% for i,j in oursearchengine %}
-        <div class="btn mt-3 w-100">{{ j }} <br>
-          <a href="{{ i }}">Link</a><br>
-        </div><br>
+        <a href="{{ i }}" class="btn mt-3 w-100">{{ j }}</a><br>
         {% endfor %}
       </div>
     </div>
