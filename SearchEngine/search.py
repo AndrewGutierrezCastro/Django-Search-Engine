@@ -20,6 +20,7 @@ def google(s):
 
 #Grupo 3 Model
 def oursearchengine(s):
-    links = ['www.google.com']
-    text = ['Yes']
+    #result, metrics = query(s)
+    links = ['https://www.google.com']
+    text = ['Google']
     return links, text
